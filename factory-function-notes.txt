@@ -1,0 +1,21 @@
+scope- where a function can be used
+global- can be used everwhere
+local
+  function scoped- declared with var and available any where in the function
+  block- declared with lets/const and available only in the enclosing {}
+
+
+closures- funtion + lexical environment (outer function)
+anything created before the inner function is returned is always remembered.
+
+destructuring
+instead of const name = person.name, const age = person.age, you can use 
+the concept of destructuring and simplify it as const {name, age} = person
+
+const person = { name: 'Alice', age: 25, city: 'Wonderland' };
+
+// Destructuring
+const { name, age } = person;
+
+console.log(name); // 'Alice'
+console.log(age);  // 25
