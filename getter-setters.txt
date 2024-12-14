@@ -1,0 +1,77 @@
+examples to undestand getters and setters
+let rectangle = {
+    _width: 10,
+    _height : 8,
+
+    get width(){
+        return  this._width
+    },
+
+    set width(value){
+        if (width <= 0){
+            console.log("value should be positive")
+            return
+        }
+     this._width = value;
+    },
+
+    get height(){
+        return  this._height
+    },
+
+    set height(value){
+        if (height <= 0){
+            console.log("value should be positive")
+            return
+        }
+     this._height = value;
+    },
+
+    get area(){
+        return this._height * this._width;
+    }
+}
+
+
+let car = {
+    _speed : 90,
+
+    get speed (){
+        return this._speed;
+    },
+
+    set speed (value){
+       if (this._speed + value > 120){
+        console.log("speed is too high")
+        this._speed = value
+       }
+       this._speed = this._speed +value;
+    }
+}
+
+
+let person={
+    _name : "smith",
+}
+Object.defineProperty(person,"name",{
+    get(){
+        return this._name
+    },
+
+    set(value){
+       if (value.length< 3){
+       console.log("name too short")
+       }
+       this._name = value;
+    }
+})
+
+
+let book = {
+    _publishedYear : 2000,
+
+    get age(){
+        return today.getFullYear() - this._publishedYear
+    }
+
+
